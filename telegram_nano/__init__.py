@@ -3,9 +3,6 @@ import typing
 from nano_api import (Object, DataField, ObjectField, IdField, ApiFunction, CachedStaticProperty, CachedProperty,
                       InputFile)
 
-__na_required__ = 'nano_api==1.0'
-__version__ = '1.0'
-
 
 class WebhookInfo(Object):
     url = DataField(str)
@@ -154,7 +151,7 @@ class ChatPhoto(Object):
 
 
 class Chat(Object):
-    id = IdField(str)
+    id = IdField(int)
     type = DataField(str, one_of=('private', 'group', 'supergroup', 'channel'))
     title = DataField(str, optional=True)
     username = DataField(str, optional=True)

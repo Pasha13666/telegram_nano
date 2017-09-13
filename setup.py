@@ -1,11 +1,10 @@
 from distutils.core import setup
-import telegram_nano
 
 setup(
     name='telegram_nano',
-    version=telegram_nano.__version__,
+    version='1.0',
     packages=['telegram_nano'],
-    install_requires=[telegram_nano.__na_required__],
+    dependency_links=['git+https://github.com/Pasha13666/nano_api.git'],
     license='MIT',
     author='Pasha__kun',
     url='https://github.com/Pasha13666/telegram_nano',
